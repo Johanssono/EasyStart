@@ -12,8 +12,12 @@ namespace EasyStart
         public MyWorld() : base(600, 800)
         {
             GameArt.Add("bluerock");
+            GameArt.Add("lizard2");
+            GameArt.Add("pumpkin");
 
             BackgroundTileName = "bluerock";
+
+            Add(new Lizard(), "lizard2", 300, 400);
         }  
     }
 }
