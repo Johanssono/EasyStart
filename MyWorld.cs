@@ -9,6 +9,7 @@ namespace EasyStart
 {
     internal class MyWorld : World
     {
+        private Random random = new Random();
         public MyWorld() : base(600, 800)
         {
             GameArt.Add("bluerock");
@@ -18,6 +19,11 @@ namespace EasyStart
             BackgroundTileName = "bluerock";
 
             Add(new Lizard(), "lizard2", 300, 400);
+
+            for (int i = 0; i < 15; i++)
+            {
+                Add(new Pumpkin(), "pumpkin", random.Next(800), random.Next(600));
+            }
         }  
     }
 }
