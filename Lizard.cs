@@ -15,6 +15,10 @@ namespace EasyStart
         private float speed = 500;
         private Random random = new Random();
         private int score = 0;
+        private int test = 10;
+        
+
+
 
         private bool isDead = false;
 
@@ -69,12 +73,19 @@ namespace EasyStart
             {
                 //RemoveTouching(typeof(Pumpkin));
 
-                pumpkin.Position = new Vector2(30, 30);
+                pumpkin.Position = new Vector2(random.Next(1200), random.Next(900));
+                score += 1;
+                Showscore();
+
                 if (pumpkin.IsTouching(typeof(Heart)))
                 {
                     pumpkin.Position = new Vector2(random.Next(1200), random.Next(900));
-                    score += 1;
-                    Showscore();
+                }
+
+                if (score == test)
+                {
+                    World.Add(new Snake(this), "snake", random.Next(1250, 2000), random.Next(950, 2000));
+                    test = test + 10;
                 }
 
             }

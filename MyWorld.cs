@@ -35,10 +35,9 @@ namespace EasyStart
 
             }
 
-            for (int i = 0; i < 1; i++)
-            {
-                Add(new Snake(my_lizard), "snake", random.Next(1250, 2000), random.Next(950, 2000));
-            }
+    
+            Add(new Snake(my_lizard), "snake", random.Next(1250, 2000), random.Next(950, 2000));
+            
 
             for (int i = 0; i < 1; i++)
             {
