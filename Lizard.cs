@@ -15,7 +15,7 @@ namespace EasyStart
         private float speed = 500;
         private Random random = new Random();
         private int score = 0;
-        private int test = 10;
+        private int DifficultyAdder = 10;
         
 
 
@@ -82,10 +82,10 @@ namespace EasyStart
                     pumpkin.Position = new Vector2(random.Next(1200), random.Next(900));
                 }
 
-                if (score == test)
+                if (score == DifficultyAdder)
                 {
                     World.Add(new Snake(this), "snake", random.Next(1250, 2000), random.Next(950, 2000));
-                    test = test + 10;
+                    DifficultyAdder = DifficultyAdder + 10;
                 }
 
             }
